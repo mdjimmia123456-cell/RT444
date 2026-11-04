@@ -1,0 +1,305 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f0c;
+    color: #ffffff;
+    padding-bottom: 70px;
+}
+
+/* Header Styling */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #111a14;
+    border-bottom: 1px solid #1e3f28;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 22px;
+    color: #00ff66;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    font-size: 13px;
+    color: #a0a0a0;
+}
+
+.balance-box {
+    background: #00ff66;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Banner Styling */
+.banner-section {
+    padding: 10px 15px;
+}
+
+.banner {
+    background: linear-gradient(135deg, #004d25, #0d1e13);
+    border: 1px solid #00ff66;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.banner h2 {
+    color: #00ff66;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    justify-content: space-around;
+    background: #142117;
+    padding: 12px 5px;
+    margin: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #1e3f28;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #00ff66;
+    cursor: pointer;
+}
+
+.action-item i {
+    font-size: 18px;
+}
+
+/* Category + Games Layout */
+.main-container {
+    display: flex;
+    padding: 0 15px;
+    gap: 10px;
+}
+
+.category-menu {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cat-btn {
+    background: #142117;
+    border: 1px solid #1e3f28;
+    color: #ccc;
+    padding: 10px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background: #00ff66;
+    color: #000;
+    font-weight: bold;
+}
+
+.games-grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.game-card {
+    background: #142117;
+    border: 1px solid #1e3f28;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.game-img {
+    height: 75px;
+    background: #004d25;
+    color: #00ff66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 5px;
+
+.aviator-bg {
+    background: #8b0000;
+    color: #fff;
+}
+
+.game-card p {
+    font-size: 12px;
+}
+
+/* Page Views & Account Section */
+.page-view {
+    padding: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.account-card {
+    background: #142117;
+    border: 1px solid #00ff66;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.profile-icon {
+    font-size: 40px;
+    color: #00ff66;
+}
+
+.badge {
+    background: #00ff66;
+    color: #000;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.acc-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.acc-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-deposit { background: #00ff66; color: #000; }
+.btn-withdraw { background: #1e3f28; color: #fff; }
+.btn-card { background: #333; color: #fff; }
+
+.account-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    background: #142117;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #1e3f28;
+    cursor: pointer;
+}
+
+/* Inputs & Buttons */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: #142117;
+    border: 1px solid #1e3f28;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ff66;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #00ff66;
+    font-size: 14px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111a14;
+    border-top: 1px solid #1e3f28;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.nav-item i {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.nav-item.active {
+    color: #00ff66;
+}

@@ -1,0 +1,164 @@
+
+
+  <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT444 - Gaming Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Header Bar -->
+    <header class="top-header">
+        <div class="header-left">
+            <i class="fa-solid fa-bars" onclick="toggleSidebar()"></i>
+            <h1 class="logo">RT<span>444</span></h1>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <i class="fa-solid fa-user-circle"></i>
+                <span id="username">mdjimmia75</span>
+            </div>
+            <div class="balance-box">
+                <span class="currency">৳</span>
+                <span id="user-balance">1.63</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Carousel Section -->
+    <section class="banner-section">
+        <div class="banner">
+            <h2>RT444 এ ৯ সুপার কমিশন</h2>
+            <p>প্রতিদিন লগ ইন করুন সোনার ডিম জিতে নিন ৳৭,৭৭৭!</p>
+        </div>
+    </section>
+
+    <!-- Quick Actions Bar -->
+    <section class="quick-actions">
+        <div class="action-item" onclick="openPage('deposit')">
+            <i class="fa-solid fa-wallet"></i>
+            <span>ডিপোজিট</span>
+        </div>
+        <div class="action-item" onclick="openPage('withdraw')">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <span>উত্তোলন</span>
+        </div>
+        <div class="action-item">
+            <i class="fa-solid fa-crown"></i>
+            <span>ভিআইপি</span>
+        </div>
+        <div class="action-item" onclick="alert('কাস্টমার সার্ভিসে কানেক্ট হচ্ছে...')">
+            <i class="fa-solid fa-headset"></i>
+            <span>গ্রাহক সেবা</span>
+        </div>
+        <div class="action-item">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>APP</span>
+        </div>
+    </section>
+
+    <!-- Main Content Area: Left Category Menu + Right Games Grid -->
+    <main class="main-container">
+        <!-- Sidebar Category Menu -->
+        <aside class="category-menu" id="sideCategory">
+            <button class="cat-btn active"><i class="fa-solid fa-fire"></i> গরম</button>
+            <button class="cat-btn"><i class="fa-solid fa-gamepad"></i> স্লট</button>
+            <button class="cat-btn"><i class="fa-solid fa-fish"></i> মাছ</button>
+            <button class="cat-btn"><i class="fa-solid fa-chess"></i> ফিচিং</button>
+            <button class="cat-btn"><i class="fa-solid fa-video"></i> লাইভ</button>
+            <button class="cat-btn"><i class="fa-solid fa-football"></i> স্পোর্টস</button>
+        </aside>
+
+        <!-- Games Grid -->
+        <section class="games-grid">
+            <div class="game-card" onclick="launchGame('Super Ace')">
+                <div class="game-img">SUPER ACE</div>
+                <p>সুপার এস</p>
+            </div>
+            <div class="game-card" onclick="launchGame('Aviator')">
+                <div class="game-img aviator-bg">AVIATOR</div>
+                <p>এভিয়েটর</p>
+            </div>
+            <div class="game-card" onclick="launchGame('FlyX')">
+                <div class="game-img">FLYX</div>
+                <p>ফ্লাইX</p>
+            </div>
+            <div class="game-card" onclick="launchGame('Lucky Mischief')">
+                <div class="game-img">LUCKY</div>
+                <p>লাকি মিশচিফ</p>
+            </div>
+            <div class="game-card" onclick="launchGame('Magic Ace')">
+                <div class="game-img">MAGIC ACE</div>
+                <p>ম্যাজিক এস</p>
+            </div>
+            <div class="game-card" onclick="launchGame('Fortune Gems')">
+                <div class="game-img">FORTUNE</div>
+                <p>ফরচুন জেমস</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Account View Section (Initially Hidden) -->
+    <section id="account-section" class="page-view hidden">
+        <div class="account-card">
+            <div class="profile-header">
+                <i class="fa-solid fa-circle-user profile-icon"></i>
+                <div>
+                    <h3>mdjimmia75 <span class="badge">VIP 0</span></h3>
+                    <p>ব্যালেন্স: ৳ <span id="acc-balance">1.63</span></p>
+                </div>
+            </div>
+            <div class="acc-actions">
+                <button class="btn-deposit" onclick="openPage('deposit')"><i class="fa-solid fa-wallet"></i> জমা দিন</button>
+                <button class="btn-withdraw" onclick="openPage('withdraw')"><i class="fa-solid fa-hand-holding-dollar"></i> উত্তোলন</button>
+                <button class="btn-card" onclick="openPage('wallet')"><i class="fa-solid fa-credit-card"></i> আমার কার্ড</button>
+            </div>
+        </div>
+
+        <div class="account-menu-list">
+            <div class="menu-item" onclick="alert('বোর্ডের ইতিহাস খালি')"><i class="fa-solid fa-list-check"></i> বেটিং ইতিহাস</div>
+            <div class="menu-item" onclick="openPage('wallet')"><i class="fa-solid fa-wallet"></i> ই-ওয়ালেট (bKash/Nagad)</div>
+            <div class="menu-item" onclick="openPage('security')"><i class="fa-solid fa-shield-halved"></i> সুরক্ষা কেন্দ্র</div>
+            <div class="menu-item" onclick="alert('লগ আউট সম্পন্ন হয়েছে')"><i class="fa-solid fa-right-from-bracket"></i> লগ আউট</div>
+        </div>
+    </section>
+
+    <!-- Deposit & Withdraw Pages -->
+    <section id="withdraw-section" class="page-view hidden">
+        <button class="back-btn" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> ফিরে যান</button>
+        <h2>উত্তোলন (Withdraw)</h2>
+        <div class="wallet-box">
+            <p><strong>আবদ্ধ E-wallet:</strong> bKash (******2575)</p>
+            <p><strong>Nagad:</strong> (******7341)</p>
+        </div>
+        <input type="number" placeholder="উত্তোলনের পরিমাণ লিখুন" class="input-field">
+        <button class="submit-btn">উত্তোলন নিশ্চিত করুন</button>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" onclick="showHome()">
+            <i class="fa-solid fa-house"></i>
+            <span>হোম</span>
+        </a>
+        <a href="#" class="nav-item" onclick="alert('কোনো নতুন প্রমোশন নেই')">
+            <i class="fa-solid fa-gift"></i>
+            <span>প্রমোশন</span>
+        </a>
+        <a href="#" class="nav-item" onclick="alert('ইনভাইট লিংক কপি হয়েছে')">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>আমন্ত্রণ</span>
+        </a>
+        <a href="#" class="nav-item" onclick="openPage('account')">
+            <i class="fa-solid fa-user"></i>
+            <span>আমার অ্যাকাউন্ট</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
